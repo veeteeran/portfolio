@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.92f65351.chunk.css",
+    "main.js": "/portfolio/static/js/main.054a8744.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.054a8744.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.a577922d.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.a577922d.js.map",
+    "static/js/2.75b3baf7.chunk.js": "/portfolio/static/js/2.75b3baf7.chunk.js",
+    "static/js/2.75b3baf7.chunk.js.map": "/portfolio/static/js/2.75b3baf7.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/main.92f65351.chunk.css.map": "/portfolio/static/css/main.92f65351.chunk.css.map",
+    "static/js/2.75b3baf7.chunk.js.LICENSE.txt": "/portfolio/static/js/2.75b3baf7.chunk.js.LICENSE.txt",
+    "static/media/airbnb.ed73597d.png": "/portfolio/static/media/airbnb.ed73597d.png",
+    "static/media/friendzy.1bd08423.png": "/portfolio/static/media/friendzy.1bd08423.png",
+    "static/media/headphones.4f5cda2f.png": "/portfolio/static/media/headphones.4f5cda2f.png",
+    "static/media/holbie.22bda8e1.jpg": "/portfolio/static/media/holbie.22bda8e1.jpg",
+    "static/media/Landing.css": "/portfolio/static/media/hueco_sunset.b4f3040e.jpg",
+    "static/media/smile.ac941efb.png": "/portfolio/static/media/smile.ac941efb.png",
+    "static/media/tcl17.f8673c59.png": "/portfolio/static/media/tcl17.f8673c59.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a577922d.js",
+    "static/js/2.75b3baf7.chunk.js",
+    "static/css/main.92f65351.chunk.css",
+    "static/js/main.054a8744.chunk.js"
+  ]
+}
