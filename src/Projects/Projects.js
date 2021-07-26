@@ -24,23 +24,6 @@ import smile from "../assets/smile.png"
 import headphones from "../assets/headphones.png"
 
 const styles = makeStyles(theme => ({
-  // container: {
-  //   backgroundImage: `url(${headshot})`,
-  //   backgroundRepeat: 'no-repeat',
-  //   backgroundSize: 'cover',
-  //   backgroundPosition: '0% 20%',
-  //   height: '50vw',
-  //   color: '#683b2f',
-  //   display: 'flex',
-  //   flexDirection: 'column',
-  //   justifyContent: 'space-between',
-  //   alignItems: 'center',
-  //   fontSize: '2rem',
-  //   fontWeight: '600',
-  //   height: 'auto',
-  //   width: 'auto',
-  //   background: 'linear-gradient(rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.41))'
-  // },
   carousel: {
     left: '25vw',
   },
@@ -64,9 +47,6 @@ const styles = makeStyles(theme => ({
 
 const Projects = () => {
   const classes = styles()
-  // const items = [
-
-  // ]
 
   return (
     <div className='projects' id='proj'>

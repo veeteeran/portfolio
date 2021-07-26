@@ -96,6 +96,12 @@ const Header = (props) => {
             </Link>
             <Link className={classes.links} href="#proj">Projects</Link>
             <Link className={classes.links} href="#contact">Contact</Link>
+            <Link className={classes.links} href="../assets/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume
+            </Link>
           </Box>
         </AppBar>
       </HideOnScroll>
