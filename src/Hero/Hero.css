@@ -1,0 +1,39 @@
+.text {
+  margin-left: 3rem;
+  margin-top: 14rem;
+}
+
+.typewriter {
+  /* display: inline-block; */
+  overflow: hidden;
+  letter-spacing: 2px;
+  animation: typing 3.5s steps(20, end) 3, blink .75s step-end infinite;
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: 400;
+  border-right: 4px solid #EBD8D3;
+  box-sizing: border-box;
+  align-self: flex-start;
+  color: #EBD8D3;
+  margin-left: 2vw;
+  /* margin-top: 10rem; */
+  margin-bottom: 3vw;
+}
+
+@keyframes typing {
+  from { 
+      width: 0vw 
+  }
+  to { 
+      width: 46vw 
+  }
+}
+
+@keyframes blink {
+  from, to { 
+      border-color: transparent 
+  }
+  50% { 
+      border-color: #EBD8D3; 
+  }
+}

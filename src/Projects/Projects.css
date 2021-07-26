@@ -1,0 +1,25 @@
+.projects {
+  color: #683b2f;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 2rem;
+  font-weight: 600;
+  height: 50vw;
+  width: auto;
+  background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('../assets/headshot.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 20%;
+  }
+  /* .projects::before {
+    content: "";
+    background-image: url('../assets/headshot.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 20%;
+    height: auto;
+    width: auto;
+    opacity: 0.4;
+    z-index: -3;
+  } */
