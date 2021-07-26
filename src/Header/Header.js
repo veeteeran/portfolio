@@ -32,7 +32,7 @@ const styles = makeStyles(theme => ({
   },
   linkBox: {
     display: 'flex',
-    width: '35vw',
+    width: '45vw',
     justifyContent: "space-around",
     marginRight: '1rem',
     [theme.breakpoints.down(700)]: {
@@ -96,7 +96,7 @@ const Header = (props) => {
             </Link>
             <Link className={classes.links} href="#proj">Projects</Link>
             <Link className={classes.links} href="#contact">Contact</Link>
-            <Link className={classes.links} href="../assets/resume.pdf"
+            <Link className={classes.links} href="resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
