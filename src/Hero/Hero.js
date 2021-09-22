@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography } from '@material-ui/core';
+import { Box, Slide, Typography } from '@material-ui/core';
 import "./Hero.css"
 import { makeStyles } from '@material-ui/core/styles';
 import hobbit from '../assets/hwb.png'
@@ -41,7 +41,7 @@ const Hero = () => {
 
   return (
     // Add a background image
-    <React.Fragment>
+    <Slide direction='down' in='true' timeout={750}>
       {/* <Box id='home'>Lorem ipsum</Box> */}
       {/* <ThemeProvider theme={theme}>
         <CssBaseline /> */}
@@ -56,7 +56,7 @@ const Hero = () => {
         {/* <Typography classes={{ root: 'typewriter' }}>I talk to computers.</Typography> */}
       </Box>
       {/* </ ThemeProvider> */}
-    </React.Fragment>
+    </Slide>
   );
 };
 

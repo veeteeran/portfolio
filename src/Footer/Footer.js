@@ -5,6 +5,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import Fade from 'react-reveal/Fade';
 
 
 const styles = makeStyles(theme => ({
@@ -53,56 +54,62 @@ const Footer = () => {
             direction='row'
             justifyContent='space-around'
           >
-            <Grid item>
-              <Button>
-                <Link className={classes.links} href="https://www.linkedin.com/in/viet-t/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <LinkedInIcon className={classes.icons} />
-                </Link>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button>
-                <Link className={classes.links} href="https://github.com/veeteeran"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <GitHubIcon className={classes.icons} />
-                </Link>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button>
-                <Link className={classes.links} href="https://twitter.com/veeteeran"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <TwitterIcon className={classes.icons} />
-                </Link>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button>
-                <Link className={classes.links} href="mailto:viet_tran@pm.me" target="_blank"
-                  rel="noopener noreferrer">
-                  <MailOutlineIcon className={classes.icons} />
-                </Link>
-              </Button>
-            </Grid>
+            <Fade left>
+              <Grid item>
+                <Button>
+                  <Link className={classes.links} href="https://www.linkedin.com/in/viet-t/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LinkedInIcon className={classes.icons} />
+                  </Link>
+                </Button>
+              </Grid>
+              <Grid item>
+                <Button>
+                  <Link className={classes.links} href="https://github.com/veeteeran"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <GitHubIcon className={classes.icons} />
+                  </Link>
+                </Button>
+              </Grid>
+              <Grid item>
+                <Button>
+                  <Link className={classes.links} href="https://twitter.com/veeteeran"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <TwitterIcon className={classes.icons} />
+                  </Link>
+                </Button>
+              </Grid>
+              <Grid item>
+                <Button>
+                  <Link className={classes.links} href="mailto:viet_tran@pm.me" target="_blank"
+                    rel="noopener noreferrer">
+                    <MailOutlineIcon className={classes.icons} />
+                  </Link>
+                </Button>
+              </Grid>
+            </Fade>
           </Grid>
           <Grid item md={2}
             style={{ alignSelf: 'flex-end' }}
           >
-            <Typography className={classes.copyright}>
-              Viet Tran 2021
-            </Typography>
+            <Fade up>
+              <Typography className={classes.copyright}>
+                Viet Tran 2021
+              </Typography>
+            </Fade>
           </Grid>
           <Grid item md={5}>
-            <p className={classes.clickClack}>
-              click-ity clack-ity . click-ity clack-ity
-            </p>
+            <Fade right>
+              <p className={classes.clickClack}>
+                click-ity clack-ity . click-ity clack-ity
+              </p>
+            </Fade>
           </Grid>
         </Grid>
       </footer>

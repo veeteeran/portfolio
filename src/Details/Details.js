@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Container, Grid, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Fade from 'react-reveal/Fade';
 
 const styles = makeStyles(theme => ({
   container: {
@@ -33,23 +34,34 @@ const Details = () => {
   return (
     <Grid className={classes.container} container spacing={2} id='details'>
       <Grid item md={6}>
-        <Box className={classes.title}>About Me</Box>
-        <p className={classes.content}>I grew up in Michigan, moved to San Francisco after graduating from college, and taught English in South Korea for 5 years. A generalist who enjoys learning a little bit about a lot of things. Continually growing and improving.</p>
+        <Fade right>
+          <Box className={classes.title}>About Me</Box>
+          <p className={classes.content}>I grew up in Michigan, moved to San Francisco after graduating from college, and taught English in South Korea for 5 years. A generalist who enjoys learning a little bit about a lot of things. Continually growing and improving.</p>
+        </Fade>
       </Grid>
-      <Grid item md={6}><Box className={classes.title}>Focus</Box>
-        <p className={classes.content}>
-          Being a little bit better than I was before. Stepping outside of my  comfort zone, going through the process of feeling lost, the spark of understanding, and the satisfaction of using that knowledge to solve problems. Then, refining those skills.
-        </p>
+      <Grid item md={6}>
+        <Fade right>
+          <Box className={classes.title}>Focus</Box>
+          <p className={classes.content}>
+            Being a little bit better than I was before. Stepping outside of my  comfort zone, going through the process of feeling lost, the spark of understanding, and the satisfaction of using that knowledge to solve problems. Then, refining those skills.
+          </p>
+        </Fade>
       </Grid>
-      <Grid item md={6}><Box className={classes.title}>Vibe</Box>
-        <p className={classes.content}>
-          Working on a team with people who listen to each other, give and receive feedback, are not afraid to make mistakes or ask for help. Let's create products and services that are easy for people to use and help make their lives better.
-        </p>
+      <Grid item md={6}>
+        <Fade left>
+          <Box className={classes.title}>Vibe</Box>
+          <p className={classes.content}>
+            Working on a team with people who listen to each other, give and receive feedback, are not afraid to make mistakes or ask for help. Let's create products and services that are easy for people to use and help make their lives better.
+          </p>
+        </Fade>
       </Grid>
-      <Grid item md={6}><Box className={classes.title}>Extra</Box>
-        <p className={classes.content}>When I’m not making click-ity clack-ity sounds I’ll be climbing, hopefully on rocks or otherwise on plastic. I love the desert and discovered being envenomed does not make you a Parselmouth. Let’s nerd out or talk sport ball.</p>
+      <Grid item md={6}>
+        <Fade left>
+          <Box className={classes.title}>Extra</Box>
+          <p className={classes.content}>When I’m not making click-ity clack-ity sounds I’ll be climbing, hopefully on rocks or otherwise on plastic. I love the desert and discovered being envenomed does not make you a Parselmouth. Let’s nerd out or talk sport ball.</p>
+        </Fade>
       </Grid>
-    </Grid>
+    </Grid >
   );
 };
 
