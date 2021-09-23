@@ -15,9 +15,11 @@ const styles = makeStyles(theme => ({
     color: 'white',
     textAlign: 'center',
     width: '75%',
-    // marginTop: '',
     marginLeft: 'auto',
     marginRight: 'auto',
+    [theme.breakpoints.down(700)]: {
+      fontSize: '9vw'
+    },
   },
   content: {
     fontFamily: 'Open Sans',
@@ -26,6 +28,12 @@ const styles = makeStyles(theme => ({
     color: 'white',
     marginLeft: 'auto',
     marginRight: 'auto',
+    [theme.breakpoints.down(700)]: {
+      width: '100%',
+      fontSize: '4vw',
+      padding: '0 10vw',
+      textAlign: 'center'
+    },
   }
 }))
 

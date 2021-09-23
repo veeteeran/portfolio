@@ -27,10 +27,17 @@ import headphones from "../assets/headphones.png"
 const styles = makeStyles(theme => ({
   carousel: {
     left: '25vw',
+    [theme.breakpoints.down(700)]: {
+      left: 'unset',
+    }
   },
   card: {
     maxWidth: '25vw',
-    maxHeight: '40vw'
+    maxHeight: '40vw',
+    [theme.breakpoints.down(700)]: {
+      maxWidth: 'unset',
+      maxHeight: 'unset',
+    }
   },
   cardMedia: {
     height: '11rem'

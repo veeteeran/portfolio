@@ -12,14 +12,13 @@
   background-size: cover;
   background-position: 0% 20%;
   }
-  /* .projects::before {
-    content: "";
-    background-image: url('../assets/headshot.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0% 20%;
-    height: auto;
-    width: auto;
-    opacity: 0.4;
-    z-index: -3;
-  } */
+
+  @media (max-width: 701px) {
+    .projects {
+      height: unset;
+      background: unset;
+      background-repeat: unset;
+      background-size: unset;
+      background-position: unset;
+      }
+  }

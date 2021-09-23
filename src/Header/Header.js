@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Box, Button, Link, Menu, Typography, Slide, SvgIcon, useScrollTrigger } from '@material-ui/core';
+import { AppBar, Box, Button, Link, Menu, MenuItem, Typography, Slide, SvgIcon, useMediaQuery, useScrollTrigger } from '@material-ui/core';
 import './Header.css'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
@@ -38,32 +38,44 @@ const styles = makeStyles(theme => ({
     justifyContent: "space-around",
     marginRight: '1rem',
     [theme.breakpoints.down(700)]: {
-      flexDirection: 'column',
-      marginRight: '0rem',
-      alignItems: "space-between",
+      width: '78%',
+      justifyContent: "space-between",
     },
   },
   links: {
     color: '#362A27',
-    fontSize: '1.3vw'
+    fontSize: '1.3vw',
+    [theme.breakpoints.down(700)]: {
+      fontSize: '2.3vw',
+    },
   },
   btnImage: {
     // backgroundImage: `url(${reactIcon})`,
-    height: '65px',
-    width: '65px',
+    height: '6.3vw',
+    width: '6.3vw',
     // backgroundRepeat: 'no-repeat',
     // backgroundPosition: 'center center',
     // border: 'none',
     // backgroundColor: 'transparent',
     // cursor: 'pointer',
+    [theme.breakpoints.down(700)]: {
+      // flexDirection: 'column',
+      // marginRight: '0rem',
+      // alignItems: "space-between",
+      height: '10vw',
+      width: '10vw',
+    }
   },
   button: {
-    height: '65px',
-    width: '65px',
+    height: '6.3vw',
+    width: '6.3vw',
     border: 'none',
     backgroundColor: 'transparent',
     cursor: 'pointer',
-    marginLeft: '1rem'
+    marginLeft: '1rem',
+    [theme.breakpoints.down(700)]: {
+      margin: '2vw 0'
+    }
   }
 }))
 
@@ -77,7 +89,16 @@ const Header = (props) => {
     eventListener()
     window.addEventListener('scroll', eventListener)
   }, [])
+  const matches = useMediaQuery('(min-width:700px)')
+  const [anchorEl, setAnchorEl] = useState(null);
 
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -88,7 +109,12 @@ const Header = (props) => {
           timeout={1000}
         >
           <AppBar className={classes.nav + `${scrolled ? ` ${classes.scrolled}` : ''}`}>
-            <Button className={classes.button}>
+            <Button className={classes.button}
+              disabled={matches}
+              aria-controls="simple-menu"
+              aria-haspopup="true"
+              onClick={handleClick}
+            >
               <img className={classes.btnImage} alt="react logo" src={reactIcon} />
             </Button>
             <Box className={classes.linkBox}>
@@ -112,6 +138,17 @@ const Header = (props) => {
               >
                 Resume
               </Link>
+              <Menu
+                id="simple-menu"
+                anchorEl={anchorEl}
+                keepMounted
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem onClick={handleClose}>Logout</MenuItem>
+              </Menu>
             </Box>
           </AppBar>
         </Slide>

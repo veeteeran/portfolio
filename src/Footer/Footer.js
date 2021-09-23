@@ -11,13 +11,19 @@ import Fade from 'react-reveal/Fade';
 const styles = makeStyles(theme => ({
   container: {
     backgroundColor: '#34353A',
-    height: '9.6vw'
+    height: '9.6vw',
+    [theme.breakpoints.down(700)]: {
+      height: 'unset'
+    }
   },
   links: {
     color: 'black'
   },
   icons: {
-    fontSize: '3vw'
+    fontSize: '3vw',
+    [theme.breakpoints.down(700)]: {
+      fontSize: '8vw'
+    }
   },
   copyright: {
     textAlign: 'center',
@@ -30,8 +36,10 @@ const styles = makeStyles(theme => ({
     textAlign: 'right',
     color: '#E33A27',
     fontSize: '.9vw',
-    // alignSelf: 'center',
-    marginRight: '1vw'
+    marginRight: '1vw',
+    [theme.breakpoints.down(700)]: {
+      fontSize: '2vw'
+    }
   }
 }));
 

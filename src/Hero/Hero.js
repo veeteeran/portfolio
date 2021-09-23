@@ -21,13 +21,22 @@ const styles = makeStyles(theme => ({
     alignItems: 'center',
     fontSize: '2rem',
     fontWeight: '600',
-    // lineHeight: '.5rem',
-    // marginTop: '100px'
+    [theme.breakpoints.down(700)]: {
+      backgroundImage: `url(${ldip})`,
+      height: '100%',
+      alignItems: 'flex-end',
+      color: '#EBD8D3'
+    },
   },
   hello: {
     marginTop: '100px',
     fontSize: '5vw',
-    fontFamily: 'Skranji'
+    fontFamily: 'Skranji',
+    [theme.breakpoints.down(700)]: {
+      marginTop: '12vw',
+      fontSize: '6vw',
+      paddingRight: '2vw',
+    },
   },
   subText: {
     alignSelf: 'flex-start',
