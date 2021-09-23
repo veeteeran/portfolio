@@ -17,7 +17,11 @@ const styles = makeStyles(theme => ({
     }
   },
   links: {
-    color: 'black'
+    color: 'black',
+    [theme.breakpoints.down(700)]: {
+      color: 'white',
+      padding: '1vw 0'
+    }
   },
   icons: {
     fontSize: '3vw',
@@ -25,12 +29,24 @@ const styles = makeStyles(theme => ({
       fontSize: '8vw'
     }
   },
+  copyrightContainer: {
+    alignSelf: 'flex-end',
+  },
   copyright: {
     textAlign: 'center',
     color: 'white',
     fontSize: '1.25vw',
     alignSelf: 'flex-end',
-    marginBottom: '1vw'
+    marginBottom: '1vw',
+    [theme.breakpoints.down(700)]: {
+      display: 'none'
+    }
+  },
+  clickClackContainer: {
+    [theme.breakpoints.down(700)]: {
+      margin: '0 auto',
+      paddingBottom: '2vw'
+    }
   },
   clickClack: {
     textAlign: 'right',
@@ -38,7 +54,9 @@ const styles = makeStyles(theme => ({
     fontSize: '.9vw',
     marginRight: '1vw',
     [theme.breakpoints.down(700)]: {
-      fontSize: '2vw'
+      fontSize: '2vw',
+      margin: '0 auto',
+      textAlign: 'unset'
     }
   }
 }));
@@ -104,7 +122,7 @@ const Footer = () => {
             </Fade>
           </Grid>
           <Grid item md={2}
-            style={{ alignSelf: 'flex-end' }}
+            className={classes.copyrightContainer}
           >
             <Fade up>
               <Typography className={classes.copyright}>
@@ -112,10 +130,10 @@ const Footer = () => {
               </Typography>
             </Fade>
           </Grid>
-          <Grid item md={5}>
+          <Grid item md={5} className={classes.clickClackContainer}>
             <Fade right>
               <p className={classes.clickClack}>
-                click-ity clack-ity . click-ity clack-ity
+                click-ity clack-ity ... click-ity clack-ity
               </p>
             </Fade>
           </Grid>

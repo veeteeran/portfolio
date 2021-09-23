@@ -41,8 +41,8 @@
 @media (max-width: 700px) {
   .typewriter {
     /* overflow: hidden;
-    letter-spacing: 2px;
-    animation: typing 3.5s steps(20, end) 3, blink .75s step-end infinite;
+    letter-spacing: 2px; */
+    /* animation: typing 3.5s steps(20, end) 3, blink .75s step-end infinite;
     white-space: nowrap; */
     font-size: 4vw;
     /* font-weight: 400;
@@ -52,5 +52,13 @@
     color: #EBD8D3;
     margin-left: 2vw;
     margin-bottom: 3vw; */
+  }
+  @keyframes typing {
+    from { 
+        width: 0vw 
+    }
+    to { 
+        width: 100%
+    }
   }
 }

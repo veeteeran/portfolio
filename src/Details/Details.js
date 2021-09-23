@@ -30,7 +30,7 @@ const styles = makeStyles(theme => ({
     marginRight: 'auto',
     [theme.breakpoints.down(700)]: {
       width: '100%',
-      fontSize: '4vw',
+      fontSize: '4.5vw',
       padding: '0 10vw',
       textAlign: 'center'
     },
