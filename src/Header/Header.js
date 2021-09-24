@@ -7,6 +7,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import theme from '../theme';
 import reactIcon from '../assets/reactSVG'
 
+
 const HideOnScroll = (props) => {
   const trigger = useScrollTrigger()
   return (
@@ -26,11 +27,19 @@ const styles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+    [theme.breakpoints.down(700)]: {
+      backgroundColor: 'rgba(196, 196, 196, 0)',
+
+    }
   },
   scrolled: {
     backgroundColor: 'rgba(255, 255, 255, .9)',
     color: '#FFF',
+    [theme.breakpoints.down(700)]: {
+      backgroundColor: 'rgba(196, 196, 196, .3)',
+
+    }
   },
   linkBox: {
     display: 'flex',
@@ -40,13 +49,15 @@ const styles = makeStyles(theme => ({
     [theme.breakpoints.down(700)]: {
       width: '78%',
       justifyContent: "space-between",
+      display: 'none'
     },
   },
   links: {
     color: '#362A27',
     fontSize: '1.3vw',
     [theme.breakpoints.down(700)]: {
-      fontSize: '2.3vw',
+      fontSize: '3vw',
+      color: '#FFF'
     },
   },
   btnImage: {
@@ -76,6 +87,14 @@ const styles = makeStyles(theme => ({
     [theme.breakpoints.down(700)]: {
       margin: '2vw 0'
     }
+  },
+  hideMenu: {
+    display: 'none'
+  },
+  showMenu: {
+    display: 'unset',
+    width: '100%',
+    height: '100%'
   }
 }))
 
@@ -144,10 +163,43 @@ const Header = (props) => {
                 keepMounted
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
+                className={matches ? classes.hideMenu : classes.showMenu}
+                PaperProps={{
+                  style: {
+                    height: '48%',
+                    width: '100%',
+                    backgroundColor: 'black'
+                  },
+                }}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <Link href="#home" className={classes.links}>
+                    Home
+                  </Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <Link href="#details" className={classes.links}>
+                    About
+                  </Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <Link href="#proj" className={classes.links}>
+                    Projects
+                  </Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <Link className={classes.links} href="#contact">
+                    Contact
+                  </Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <Link className={classes.links} href="resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Resume
+                  </Link>
+                </MenuItem>
               </Menu>
             </Box>
           </AppBar>
